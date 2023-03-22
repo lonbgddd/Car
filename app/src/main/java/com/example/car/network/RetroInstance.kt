@@ -1,15 +1,16 @@
-package com.example.car.base
+package com.example.car.network
 
-import okhttp3.OkHttp
+import com.example.car.base.API_KEY
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 
 class RetroInstance {
     companion object {
-
-        fun getRetroInstance(): Retrofit {
+        // call api
+        fun getRetroInstance()  : RetroService {
             val logging = HttpLoggingInterceptor()
             logging.level = (HttpLoggingInterceptor.Level.BODY)
             val client = OkHttpClient.Builder()
@@ -20,6 +21,8 @@ class RetroInstance {
                 .client(client.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
+                    //connect with Dao class
+                .create(RetroService::class.java)
         }
 
     }
