@@ -41,13 +41,39 @@ android {
 }
 
 dependencies {
+// Retrofit
+    implementation 'com.squareup.moshi:moshi:1.11.0'
 
+
+
+    // OkHttp:Square’s meticulous HTTP client for Java and Kotlin.
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0-RC1'
+
+    // Retrofit:A type-safe HTTP client for Android and Java.
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    // Dagger
+
+
+    // Kotlinx Coroutines Core:Coroutines support libraries for Kotlin
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1'
+
+    // Converter: Moshi:A Retrofit Converter which uses Moshi for serialization.
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // OkHttp Logging Interceptor:Square’s meticulous HTTP client for Java and Kotlin.
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0-RC1'
+
+    // PrettyTime Core:PrettyTime Core
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.6.Final'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    //LiveData
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    //Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
