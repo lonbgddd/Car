@@ -1,3 +1,15 @@
 package com.example.car.model
 
-data class Car(val id: Int?, val name: String?)
+// To parse the JSON, install kotlin's serialization plugin and do:
+//
+// val json = Json { allowStructuredMapKeys = true }
+// val car  = json.parse(Car.serializer(), jsonString)
+
+typealias Car = ArrayList<CarElement>
+
+data class CarElement (
+    val createdAt: String? = null,
+    val name: String? = null,
+    val avatar: String? = null,
+    val id: String? = null
+)
